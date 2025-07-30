@@ -10,6 +10,9 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(0.75);
+  transform-origin: top center;
+  height: 133.33%;
 }
 .container{
   opacity: 0;
@@ -168,7 +171,7 @@ body{
 .cal-img{
   position: relative;
   text-align: center;
-  right: 55%;
+  right: 1110px;
   bottom:300px;
 }
 .cal-img > p{
