@@ -1,0 +1,72 @@
+<!-- 코드 다 짜놓고 보니까  웹페이지가 100%일때 스타일이 깨지는 현상이 발생합니다 ㅜㅜ
+ 번거로우시겠지만 75%로 봐주시면 감사하겠습니다!-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel = 'stylesheet' href = 'style.css'>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <title>calculate</title>
+</head>
+<body>
+  <div class="container">
+    <div class="control-container">
+      <div class="red-btn">
+        <p>x</p>
+      </div>
+      <div class="yellow-btn">
+        <p>-</p>
+      </div>
+      <div class="green-btn"></div>
+  </div>
+    <div class="display">
+      <p class = 'result'>0</p>
+    </div>
+    <div class="buttons">
+      <div class="fir-btn">
+        <div class="button function">C</div>
+        <div class="button function">+/-</div>
+        <div class="button function">%</div>
+        <div class="button operator">÷</div>
+      </div>
+      <div class="sec-btn">
+        <div class="button number">7</div>
+        <div class="button number">8</div>
+        <div class="button number">9</div>
+        <div class="button operator">x</div>
+      </div>
+      <div class="thr-btn">
+        <div class="button number">4</div>
+        <div class="button number">5</div>
+        <div class="button number">6</div>
+        <div class="button operator">-</div>
+      </div>
+      <div class="fth-btn">
+        <div class="button number">1</div>
+        <div class="button number">2</div>
+        <div class="button number">3</div>
+        <div class="button operator">+</div>
+      </div>
+      <div class="fif-btn">
+        <div class="button zero number">0</div>
+        <div class="button dot">.</div>
+        <div class="button equal">=</div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-editor">
+    calculator
+  </div>
+  <div class="cal-img">
+      <img src = 'img/calculatorImg.png' width = 50px height = 50px>
+      <p>Calculator</p>
+  </div>
+  <div class="cat-img">
+      <img src = 'img/cat.png' width = 80px height = 80px>
+      <p>My cat</p>
+  </div>
+<script src = 'script.js'></script>
+</body>
+</html>
