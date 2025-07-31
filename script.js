@@ -15,6 +15,9 @@ const calContainer = document.querySelector('.cal-img');
 const catContainer = document.querySelector('.cat-img');
 const controllCont = document.querySelector('.controll-container');
 const displayCont = document.querySelector('.display');
+const catCont = document.querySelector('.cat-cont');
+const change = document.querySelector('.change');
+const catArray = ['img/noori.png' , 'img/bori.JPG','img/noori1.JPG', 'img/noori2.jpg','img/mycat.JPG'];
 let firstOperand = 0;
 let secondOperand = 0;
 let operator = '';
@@ -141,16 +144,13 @@ calContainer.addEventListener(('click'),() =>{
 })
 // Mycat누르면 고양이 사진 나오게
 catContainer.addEventListener(('click'), ()=>{
-  container.style.opacity = 1;
-  container.style.backgroundImage = "url('img/mycat.JPG')";
-  container.style.backgroundPosition = "center"; 
-  container.style.backgroundSize = "contain";   
-  container.style.backgroundRepeat = "no-repeat";
-  container.style.backgroundColor = "#FFFFFF";
-  buttons.forEach((val) =>{
-    val.style.opacity = 0;
-  });
-  displayCont.style.opacity = 0;
-  display.style.opacity = 0;
-  
+  catCont.style.opacity = 1;
+  let randomImageUrl = catArray[Math.floor(Math.random() * catArray.length)];
+  catCont.style.backgroundImage = `url(${randomImageUrl})`;
+})
+
+// 새로고침 누르면 고양이 사진 바뀌게
+change.addEventListener(('click'),() =>{
+  let randomImageUrl = catArray[Math.floor(Math.random() * catArray.length)];
+  catCont.style.backgroundImage = `url(${randomImageUrl})`;
 })
