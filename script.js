@@ -158,9 +158,14 @@ calContainer.addEventListener(('click'),() =>{
 })
 // Mycat누르면 고양이 사진 나오게
 catContainer.addEventListener(('click'), ()=>{
-  catCont.style.opacity = 1;
-  let randomImageUrl = catArray[Math.floor(Math.random() * catArray.length)];
-  catCont.style.backgroundImage = `url(${randomImageUrl})`;
+  if(catCont.style.opacity === '0'){
+    catCont.style.opacity = 1;
+    let randomImageUrl = catArray[Math.floor(Math.random() * catArray.length)];
+    catCont.style.backgroundImage = `url(${randomImageUrl})`;
+  }else{
+    catCont.style.opacity = 0;
+  }
+  
 })
 
 // 새로고침 누르면 고양이 사진 바뀌게
