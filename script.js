@@ -42,6 +42,17 @@ const calculate = function(firstOperand, operator, secondOperand){
 }
 // calculate 함수
 
+// 숫자가 길어지면 숫자폰트가 작아지는 함수
+function numberLength(){
+  if (display.textContent.length >= 21){
+    display.style.fontSize = "30px";
+  }else if (display.textContent.length >= 13){
+    display.style.fontSize = "40px";
+  }else{
+    display.style.fontSize = "60px"
+  }
+}
+
 equal.addEventListener('click',() => {
   if (operator && !hasOper){
     // operator가 존재하고 secondOerand를 누르고 =을 누를때
@@ -52,6 +63,7 @@ equal.addEventListener('click',() => {
     hasOper = true;
   }
   //  operator가 눌려있는 상태에서 숫자를 누르지 않고, 바로 =을 누르는 경우에는 아무것도 처리 안함
+  numberLength();
 });
 
 
@@ -60,6 +72,7 @@ dot.addEventListener('click',() => {
     display.textContent += '.';
   }
   // 소수점이 포함되어있지 않을때만 소수점을 추가
+  numberLength();
 });
  
 for (let value of oper){
@@ -89,6 +102,7 @@ for (let value of num){
         display.textContent += value.textContent;
       }
     }
+    numberLength();
   })
 };
 
@@ -154,3 +168,4 @@ change.addEventListener(('click'),() =>{
   let randomImageUrl = catArray[Math.floor(Math.random() * catArray.length)];
   catCont.style.backgroundImage = `url(${randomImageUrl})`;
 })
+
